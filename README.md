@@ -12,20 +12,21 @@ From your command line, first clone this repo:
 
 ```bash
 # Clone this repository
-$ 
+$ git clone https://github.com/BigMak1/App_Weather_Forecast.git
 
-# Remove current origin repository
-$ 
+# Create docker image
+$ docker build -t my_app .
 
-# Create new virtual python environment
-$ 
+# Run docker container with your port (replace 7000 -> on your option)
+$ docker run -d -p 7000:8000 my_app
 
-# Activate virtual python environment
-$ 
-
-# Install all the libraries/frameworks mentioned in "requirements.txt"
-
-# Run file locally
-$ 
+# Open page on local host with your port
+$ open http://localhost:7000/docs
 
 ```
+Also you have to create file .env with your API keys. 
+'''text
+API_KEY_NOW=None
+API_HOST_NOW=None
+API_KEY_FORECAST=None
+'''
