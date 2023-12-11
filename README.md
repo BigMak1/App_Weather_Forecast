@@ -55,5 +55,7 @@ Fill it.
     "is_precipitation": bool
 }
 
+
+
     [RapidAPI]: <https://rapidapi.com/weatherapi/api/weatherapi-com>
     [WheaterAPI]: <https://www.weatherapi.com/pricing.aspx>
