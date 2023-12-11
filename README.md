@@ -1,4 +1,4 @@
-# Weather Forecast with API⛅
+# Weather Forecast with API ⛅
 
 ### A simple web-service which can view real-time weather data and forecasts for other locations worldwide.
 - Used FastAPI to create the API.
