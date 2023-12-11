@@ -2,7 +2,7 @@
 
 ### A simple web-service which can view real-time weather data and forecasts for other locations worldwide.
 - Used FastAPI to create the API.
-- Accessed Data using <a href="https://rapidapi.com/weatherapi/api/weatherapi-com">RapidAPI and <a href="https://www.weatherapi.com/pricing.aspx">WheaterAP
+- Accessed Data using [RapidAPI](https://rapidapi.com/weatherapi/api/weatherapi-com) and [WheaterAP](https://www.weatherapi.com/pricing.aspx)
 - Used Deta for deploying the API
 
 
