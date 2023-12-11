@@ -24,12 +24,34 @@ $ docker run -d -p 7000:8000 my_app
 $ open http://localhost:7000/docs
 
 ```  
-Also you have to create file .env with your API keys. By default
+Also you have to create file .env with your API keys to the path="app/settings/". By default
 ```  
 API_KEY_NOW=None
 API_HOST_NOW=None
 API_KEY_FORECAST=None
 ```
+Fill it.
+
+## Actions
+
+- get_now - get the current weather anywhere
+- get_forecast - get the weather forecast anywhere but no more than 14 days in advance
 
 ## Input
+
+```jsonc
+{
+    "country": string,
+    "city": string,
+    "when": datetime
+}
+```
+
+## Output 
+
+```jsonc
+{
+    "temp_celsium": string,
+    "is_precipitation": bool
+}
 
