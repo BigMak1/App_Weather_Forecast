@@ -2,7 +2,7 @@
 
 ### A simple web-service which can view real-time weather data and forecasts for other locations worldwide.
 - Used FastAPI to create the API.
-- Accessed Data using *[RapidAPI] and *[WheaterAPI]
+- Accessed Data using * [RapidAPI] and * [WheaterAPI]
 - Used Deta for deploying the API
 
 
