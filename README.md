@@ -24,8 +24,8 @@ $ docker run -d -p 7000:8000 my_app
 $ open http://localhost:7000/docs
 
 ```
-Also you have to create file .env with your API keys. 
-'''text
+Also you have to create file .env with your API keys. By default
+'''
 API_KEY_NOW=None
 API_HOST_NOW=None
 API_KEY_FORECAST=None
