@@ -9,6 +9,5 @@ app.include_router(router)
 
 @app.get("/", tags=["Welcome"])
 def home():
-    return {"Message": "Welcome To Weather API"}
-    
+    return {"Message": "This is the weather forecast"}
     

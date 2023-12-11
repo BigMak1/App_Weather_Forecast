@@ -22,9 +22,9 @@ def get_current_wether(request: Request) -> WeatherData:
 
     response = requests.get(URL_NOW, headers=HEADERS_NOW, params=params)
     if response.status_code == 400:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"City not found")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="City not found")
     elif response.status_code == 404:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Server is not aviable now")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Server is not aviable now")
     else:
         try:
             response = response.json()["current"]
@@ -45,14 +45,14 @@ def get_forecast(request: Request) -> WeatherData:
     - **when**: it must be between today and next 14 days in yyyy-MM-dd format 
     """
     if request.when > (date.today() +  timedelta(days=14)):
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Date must be between today and next 14 day")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Date must be between today and next 14 day")
     params = {"q":f"{request.city}", "dt": f"{request.when}"}
 
     response = requests.get(URL_FORECAST, headers=HEADERS_FORECAST, params=params)
     if response.status_code == 400:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"City not found")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="City not found")
     elif response.status_code == 404:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Server is not aviable now")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Server is not aviable now")
     else:
         try:
             response = response.json()["forecast"]["forecastday"][0]["day"]
