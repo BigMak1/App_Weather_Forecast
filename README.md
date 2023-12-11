@@ -2,7 +2,7 @@
 
 ### A simple web-service which can view real-time weather data and forecasts for other locations worldwide.
 - Used FastAPI to create the API.
-- Accessed Data using RapidAPI and WheaterAPI
+- Accessed Data using [RapidAPI] and [WheaterAPI]
 - Used Deta for deploying the API
 
 
@@ -24,7 +24,7 @@ $ docker run -d -p 7000:8000 my_app
 $ open http://localhost:7000/docs
 
 ```  
-Also you have to create file .env with your API keys to the path="app/settings/". By default
+Also you have to create file .env with your API keys to the path ``app/settings/``. By default
 ```  
 API_KEY_NOW=None
 API_HOST_NOW=None
@@ -34,8 +34,8 @@ Fill it.
 
 ## Actions
 
-- get_now - get the current weather anywhere
-- get_forecast - get the weather forecast anywhere but no more than 14 days in advance
+- ``get_now`` - get the current weather anywhere
+- ``get_forecast`` - get the weather forecast anywhere but no more than 14 days in advance
 
 ## Input
 
@@ -55,3 +55,5 @@ Fill it.
     "is_precipitation": bool
 }
 
+    [RapidAPI]: <https://rapidapi.com/weatherapi/api/weatherapi-com>
+    [WheaterAPI]: <https://www.weatherapi.com/pricing.aspx>
