@@ -8,6 +8,6 @@ app.include_router(router)
 
 
 @app.get("/", tags=["Welcome"])
-def home():
+async def home():
     return {"Message": "This is the weather forecast"}
     

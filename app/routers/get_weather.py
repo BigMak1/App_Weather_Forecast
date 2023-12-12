@@ -10,7 +10,7 @@ from app.settings.constants import URL_NOW, URL_FORECAST, HEADERS_NOW, HEADERS_F
 router = APIRouter(prefix="/weather", tags=["Weather"])
 
 @router.post("/get_now")
-def get_current_wether(request: Request) -> WeatherData:
+async def get_current_wether(request: Request) -> WeatherData:
     """
     Create an item with all the information:
 
@@ -36,7 +36,7 @@ def get_current_wether(request: Request) -> WeatherData:
     
 
 @router.post("/get_forecast")
-def get_forecast(request: Request) -> WeatherData:
+async def get_forecast(request: Request) -> WeatherData:
     """
     Create an item with all the information:
 
